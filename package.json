@@ -1,0 +1,12 @@
+{
+    "name": "netactivist-oasis-flujos",
+    "version": "1.0.0",
+    "description": "Project description here",
+    "main": "output_climate.js",
+    "scripts": {
+        "start": "node output_climate.js"
+    },
+    "dependencies": {
+        "puppeteer": "^13.7.0"
+    }
+}

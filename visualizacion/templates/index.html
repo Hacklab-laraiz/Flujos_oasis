@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Nosifer&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+    <body>
+        <div id="3d-graph" style="width: 800px; height: 600px;"></div>
+        <script>
+            {script_content}
+        </script>
+    </body>
+    <header>
+        <div class="header-content">
+            <h1 class="title">FLUJ0S</h1>
+            <div class="header-buttons">
+                <a href="{{ url_for('journalist') }}" class="small-button">Journalist</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('glob_war') }}" class="glob-war">GLOB-WAR</a></li>
+            <li><a href="{{ url_for('int_sec') }}" class="int-sec">INT-SEC</a></li>
+            <li><a href="{{ url_for('climate') }}" class="climate">CLIMATE</a></li>
+            <li><a href="{{ url_for('eco_corp') }}" class="eco-corp">ECO-CORP</a></li>
+            <li><a href="{{ url_for('popl_up') }}" class="popl-up">Popl-up</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="canvasContainer" style="position: absolute; width: 100%; height: 100%; opacity: 0.5;"></div>
+        <div class="background">
+            <a href="{{ url_for('glob_war') }}">
+                <img class="img1" src="{{ url_for('static', filename='images/flujos.jpg') }}">
+            </a>
+            <a href="{{ url_for('int_sec') }}">
+                <img class="img2" src="{{ url_for('static', filename='images/fujos5.jpg') }}">
+            </a>
+            <a href="{{ url_for('climate') }}">
+                <img class="img3" src="{{ url_for('static', filename='images/flujos6.jpg') }}">
+            </a>
+            <a href="{{ url_for('eco_corp') }}">
+                <img class="img4" src="{{ url_for('static', filename='images/flujos4.jpg') }}">
+            </a>
+            <a href="{{ url_for('popl_up') }}">
+                <img class="img5" src="{{ url_for('static', filename='images/flujos3.jpg') }}">
+            </a>
+        </div>
+    </main>
+
+    <button id="sidebarToggle">Toggle Sidebar</button>
+
+    <footer>
+        <p><a href="#">GitHub</a> | <a href="#">Telegram</a> | <a href="#">Email</a> | <a href="#">Web de Tor</a></p>
+    </footer>
+</body>
+</html>

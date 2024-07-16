@@ -1,0 +1,7 @@
+Flask==2.1.1
+selenium==4.1.0
+watchdog==2.1.6
+webdriver-manager==3.5.2
+Django==4.0.4
+requests==2.27.1
+werkzeug==2.0.3

@@ -1,0 +1,60 @@
++-----------------------------------------------------------------------------------------------+
+| Opción | Descripción                                                                           |
++-----------------------------------------------------------------------------------------------+
+|   1    | Utilizo Django como API principal:                                                   |
+|        | - **Gestión**: Manejo la lógica de negocio y datos con Django.                       |
+|        | - **Comunicación SSB**: Utilizo el servidor SSB para la comunicación descentralizada.|
+|        | - **Proxy Inverso**: Nginx dirige las solicitudes según la ruta o el tipo de solicitud|
++-----------------------------------------------------------------------------------------------+
+|   2    | Utilizo Django para la administración del sitio:                                      |
+|        | - **Funciones de Backend**: Manejo de funciones tradicionales con Django.            |
+|        | - **Comunicación SSB**: El servidor SSB gestiona la comunicación entre usuarios.     |
+|        | - **Interconexión**: Comunicación entre Django y SSB a través de HTTP o API local.   |
++-----------------------------------------------------------------------------------------------+
+|   3    | Utilizo Django y SSB de manera mixta:                                                 |
+|        | - **Backend Django**: Para manejo tradicional de la aplicación web.                  |
+|        | - **SSB Funcionalidades**: Para características descentralizadas.                    |
+|        | - **Frontend Unificado**: Presentación cohesiva a través de un interfaz unificada.   |
++-----------------------------------------------------------------------------------------------+
+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+| Opción | Compatibilidad con Tor | Solo HTML y CSS | Razones                                                              |
++----------------------------------------------------------------------------------------------------------------------+
+|   1    | ✔                      | ✔               | Ambos, Django y SSB, pueden configurarse con direcciones .onion;    |
+|        |                        |                 | el frontend puede diseñarse sin JavaScript para cumplir con las     |
+|        |                        |                 | restricciones de seguridad de Tor.                                   |
++----------------------------------------------------------------------------------------------------------------------+
+|   2    | ✔                      | ✔               | Configuración similar a la Opción 1; tanto Django como SSB pueden   |
+|        |                        |                 | operar sobre Tor y el frontend se limita a HTML y CSS para          |
+|        |                        |                 | maximizar compatibilidad y seguridad.                                |
++----------------------------------------------------------------------------------------------------------------------+
+|   3    | ✔                      | ✔               | Aunque más compleja, esta opción permite el uso de Tor para ambos   |
+|        |                        |                 | sistemas y el frontend puede evitar JavaScript, garantizando        |
+|        |                        |                 | accesibilidad y seguridad a través de la red Tor.                   |
++----------------------------------------------------------------------------------------------------------------------+
+
+
+
++---------------------------------------------------------------------------------------------+
+| Opción | Uso de JavaScript | Uso de Node.js | Detalles                                      |
++---------------------------------------------------------------------------------------------+
+|   1    | ✘                 | ✘              | Toda la interactividad y lógica se manejan   |
+|        |                   |                | en el servidor. No se utiliza JavaScript en  |
+|        |                   |                | el cliente. Node.js se usa solo en el lado   |
+|        |                   |                | del servidor para gestionar las operaciones  |
+|        |                   |                | relacionadas con SSB y otras funcionalidades.|
++---------------------------------------------------------------------------------------------+
+|   2    | ✘                 | ✘              | Similar a la opción 1, se evita JavaScript   |
+|        |                   |                | completamente en el cliente. Solo se utiliza |
+|        |                   |                | HTML y CSS para el diseño y la presentación. |
+|        |                   |                | Node.js opera en el servidor para las        |
+|        |                   |                | funcionalidades de red descentralizada.      |
++---------------------------------------------------------------------------------------------+
+|   3    | ✘                 | ✘              | No hay uso de JavaScript en el cliente para  |
+|        |                   |                | maximizar la seguridad y la compatibilidad   |
+|        |                   |                | con Tor. Se utilizan solo tecnologías de     |
+|        |                   |                | servidor para la interacción del usuario y   |
+|        |                   |                | la entrega de contenido.                     |
++---------------------------------------------------------------------------------------------+
